@@ -26,7 +26,7 @@ public class LoginTests extends TestBase {
         new LoginPage(driver)
                 .enterPersonalData("AnliTest", "Parazit102@")
                 .clickLoginButton()
-                .verifyUsetName("AnliTest");
+                .verifyUserName("AnliTest");
 
     }
 

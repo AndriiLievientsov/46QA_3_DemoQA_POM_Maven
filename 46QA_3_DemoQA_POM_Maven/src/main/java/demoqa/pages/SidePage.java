@@ -16,7 +16,8 @@ public class SidePage extends BasePage {
     WebElement login;
 
     public LoginPage selectLogin() {
-        click(login);
+//        click(login);
+clickWitJS(login, 0 , 0);
         return new LoginPage(driver);
     }
 }
