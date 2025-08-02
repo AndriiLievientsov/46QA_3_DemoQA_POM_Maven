@@ -17,7 +17,8 @@ public class SidePage extends BasePage {
 
     public LoginPage selectLogin() {
 //        click(login);
-clickWitJS(login, 0 , 0);
+        clickWitJS(login, 0, 0);
         return new LoginPage(driver);
     }
 }
+
