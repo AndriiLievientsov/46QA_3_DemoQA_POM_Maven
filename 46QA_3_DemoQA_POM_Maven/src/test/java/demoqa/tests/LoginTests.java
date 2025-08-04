@@ -8,12 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase {
-    /*
-    First name: Anli
-    Last name: Leo
-    UserName: AnliTest
-    Password: Parazit102@
-     */
+
 
     @BeforeMethod
     public void precondition() {
@@ -31,3 +26,10 @@ public class LoginTests extends TestBase {
     }
 
 }
+
+    /*
+    First name: Anli
+    Last name: Leo
+    UserName: AnliTest
+    Password: Parazit102@
+     */
