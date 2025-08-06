@@ -35,4 +35,12 @@ public class HomePageHW extends BasePageHW {
         return new ForgotPasswordHW(driver);
     }
 
+    @FindBy (xpath = "//a[normalize-space()='JavaScript Alerts']")
+    WebElement javaScriptAlerts;
+
+    public JavaScriptAlertsHW getJavaScriptAlerts () {
+        click(javaScriptAlerts);
+        return new JavaScriptAlertsHW (driver);
+    }
+
 }

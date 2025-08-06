@@ -1,11 +1,17 @@
 package internet_HW.coreHW;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
-import static java.awt.SystemColor.text;
+import java.time.Duration;
+
+
 
 public class BasePageHW {
 
@@ -22,14 +28,19 @@ public class BasePageHW {
         element.click();
     }
 
-    public void type (WebElement element, String text) {
-        if (text != null) {
-            click(element);
-            element.clear();
-            element.sendKeys(text);
-        }
+    public Alert waitForAlert(int timeoutSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+        return wait.until(ExpectedConditions.alertIsPresent());
     }
 
+    public void assertAlertText(String expectedText) {
+        Alert alert = waitForAlert(5);
+        Assert.assertEquals(alert.getText(), expectedText, "Неверный текст в алерте");
+    }
+
+    public void acceptAlert() {
+        waitForAlert(5).accept();
+    }
 
 
 }
