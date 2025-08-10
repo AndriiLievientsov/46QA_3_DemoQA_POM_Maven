@@ -12,6 +12,9 @@ public class LoginTests extends TestBase {
 
     @BeforeMethod
     public void precondition() {
+//        new HomePage(driver).getBookStore().hideAds(); тут сдеали что бы по прекандишенам пряталась реклама .hideAds()
+//        new SidePage(driver).selectLogin().hideAds();
+
         new HomePage(driver).getBookStore();
         new SidePage(driver).selectLogin();
     }

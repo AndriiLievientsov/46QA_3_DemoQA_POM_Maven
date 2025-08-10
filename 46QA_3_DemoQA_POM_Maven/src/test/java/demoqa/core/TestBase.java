@@ -22,6 +22,8 @@ public class TestBase {
         driver.get("https://demoqa.com");
     }
 
+    //@AfterMethod (enabled = false) отключил этот блок
+
     @AfterMethod
     public void tearDown () {
         if (driver != null) {

@@ -4,6 +4,7 @@ import demoqa.core.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class BookStorePage extends BasePage {
 
@@ -22,8 +23,15 @@ public class BookStorePage extends BasePage {
     @FindBy(css = ".mr-2>a")
     WebElement searchResult;
 
-    public BookStorePage verifyText(String text) {
-        assert searchResult.getText().contains(text);
+//    public BookStorePage verifyText(String text) {
+//        assert searchResult.getText().contains(text);
+//        return this;
+//    }
+
+    public BookStorePage verifyText (String expectedText) {
+        String actualText = searchResult.getText();
+        Assert.assertTrue(actualText.contains(expectedText),
+                "Ожидается: [" + expectedText + "], но было получено: [" + actualText + "]");
         return this;
     }
 }

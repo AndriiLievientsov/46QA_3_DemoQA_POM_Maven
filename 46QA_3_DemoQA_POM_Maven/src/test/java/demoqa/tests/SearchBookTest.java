@@ -16,7 +16,7 @@ public class SearchBookTest  extends TestBase {
 
     @Test
     public void searchBookTest () {
-        String bookName = "Git";
+        String bookName = "Java";
 
         new BookStorePage(driver)
                 .typeInSearchFieldInput(bookName)

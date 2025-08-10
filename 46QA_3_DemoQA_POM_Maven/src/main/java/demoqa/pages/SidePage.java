@@ -20,5 +20,13 @@ public class SidePage extends BasePage {
         clickWitJS(login, 0, 0);
         return new LoginPage(driver);
     }
+
+    @FindBy(xpath = "//span[.='Alerts']")
+    WebElement alerts;
+
+    public AlertsPage selectAlerts() {
+        click(alerts);
+        return new AlertsPage (driver);
+    }
 }
 

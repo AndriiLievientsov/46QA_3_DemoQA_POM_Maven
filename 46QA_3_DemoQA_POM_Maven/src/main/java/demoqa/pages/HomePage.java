@@ -21,4 +21,11 @@ public class HomePage extends BasePage {
         return new SidePage(driver);
     }
 
+    @FindBy(css = ".top-card:nth-child(3)")
+    WebElement alertsFrameWindows;
+
+    public BasePage getAlertsFrameWindows() {
+        click(alertsFrameWindows);
+        return new SidePage(driver);
+    }
 }
