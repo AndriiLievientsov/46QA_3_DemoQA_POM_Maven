@@ -24,7 +24,7 @@ public class TestBase {
 
     //@AfterMethod (enabled = false) отключил этот блок
 
-    @AfterMethod
+    @AfterMethod (enabled = false)
     public void tearDown () {
         if (driver != null) {
             driver.quit(); // Остановка драйверов после всех тестов

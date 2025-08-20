@@ -11,6 +11,8 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
+
+    //*BookStore
     @FindBy(css = ".top-card:nth-child(6)")
     WebElement bookStore;
 
@@ -21,6 +23,7 @@ public class HomePage extends BasePage {
         return new SidePage(driver);
     }
 
+    //*Alerts
     @FindBy(css = ".top-card:nth-child(3)")
     WebElement alertsFrameWindows;
 
@@ -28,4 +31,15 @@ public class HomePage extends BasePage {
         click(alertsFrameWindows);
         return new SidePage(driver);
     }
+
+    //* Widgets
+    @FindBy(css = ".top-card:nth-child(4)")
+    WebElement widgets;
+
+    public BasePage getWidgets() {
+        click(widgets);
+        return new SidePage(driver);
+    }
+
 }
+

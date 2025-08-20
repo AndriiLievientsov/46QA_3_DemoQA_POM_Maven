@@ -12,6 +12,7 @@ public class SidePage extends BasePage {
         super(driver);
     }
 
+    //*Login
     @FindBy(xpath = "//span[normalize-space()='Login']")
     WebElement login;
 
@@ -21,6 +22,7 @@ public class SidePage extends BasePage {
         return new LoginPage(driver);
     }
 
+    //*Alerts
     @FindBy(xpath = "//span[.='Alerts']")
     WebElement alerts;
 
@@ -28,5 +30,16 @@ public class SidePage extends BasePage {
         click(alerts);
         return new AlertsPage (driver);
     }
+
+    //*SelectMenu
+    @FindBy (xpath = " //span[.='Select Menu']")
+    WebElement selectMenu;
+
+    public WidgetsPage selectSelectMenu() {
+        click(selectMenu);
+        return new WidgetsPage(driver);
+    }
+
+
 }
 
