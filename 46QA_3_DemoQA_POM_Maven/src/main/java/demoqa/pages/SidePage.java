@@ -28,11 +28,11 @@ public class SidePage extends BasePage {
 
     public AlertsPage selectAlerts() {
         click(alerts);
-        return new AlertsPage (driver);
+        return new AlertsPage(driver);
     }
 
     //*SelectMenu
-    @FindBy (xpath = " //span[.='Select Menu']")
+    @FindBy(xpath = " //span[.='Select Menu']")
     WebElement selectMenu;
 
     public WidgetsPage selectSelectMenu() {
@@ -41,5 +41,13 @@ public class SidePage extends BasePage {
     }
 
 
+    //*BrowserWindows
+    @FindBy(xpath = " //span[.='Browser Windows']")
+    WebElement browserWindows;
+
+    public BasePage selectBrowserWindows() {
+        click(browserWindows);
+        return this;
+    }
 }
 

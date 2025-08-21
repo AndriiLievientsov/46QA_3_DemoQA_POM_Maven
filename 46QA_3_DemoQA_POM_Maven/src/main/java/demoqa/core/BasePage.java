@@ -44,6 +44,8 @@ public class BasePage {
 
 
     protected void click(WebElement element) {
+        //?Универсальный метод что не скролить постоянно страницу. scrollElement
+       // scrollElement(element);
         element.click();
     }
 
@@ -74,6 +76,18 @@ public class BasePage {
 
     }
 
+    protected void scrollTo (int y) {
+        js.executeScript("window.scrollBy(0, " + y + ")");
+    }
+
+    //Универсальный метод что не скролить постоянно страницу.
+    public void scrollElement (WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+
     protected void shouldHaveText(WebElement element, String text, int timeout) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(timeout));
         try {
@@ -82,4 +96,7 @@ public class BasePage {
             throw new AssertionError(e);
         }
     }
+
+
+
 }

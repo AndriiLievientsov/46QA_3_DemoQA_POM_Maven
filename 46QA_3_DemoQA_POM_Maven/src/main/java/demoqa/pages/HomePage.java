@@ -18,6 +18,7 @@ public class HomePage extends BasePage {
 
     public SidePage getBookStore() {
 //     click(bookStore);
+//     scrollElement(bookStore);
       clickWitJS(bookStore, 0, 0);
       // тут нули бо я у меня работает. но в целом можно скролить экран задав значение для y - 100 или 500
         return new SidePage(driver);
