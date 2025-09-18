@@ -23,6 +23,7 @@ public class WidgetsTestHW extends TestBase {
                 .verifySelected("Volvo", "Saab", "Opel");
     }
 
+
     @AfterMethod(enabled = true)
     public void tearDown() {
         if (driver != null) {

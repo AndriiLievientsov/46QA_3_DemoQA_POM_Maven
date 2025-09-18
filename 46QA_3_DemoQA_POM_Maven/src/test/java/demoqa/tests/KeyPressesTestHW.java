@@ -3,15 +3,13 @@ package demoqa.tests;
 import demoqa.pages.KeyPressesPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class KeyPressesTest {
+public class KeyPressesTestHW {
     WebDriver driver;
 
     @BeforeMethod
@@ -25,9 +23,12 @@ public class KeyPressesTest {
 
     @Test
     public void typeAndCheck() {
+        String a = "Q";
+        String b = "You entered: Q";
+
         new KeyPressesPage(driver)
-                .enterSomeSight("C")
-                .verifyResult("You entered: C");
+                .enterSomeSight(a)
+                .verifyResult(b);
     }
 
 

@@ -4,6 +4,7 @@ import demoqa.core.TestBase;
 import demoqa.pages.HomePage;
 import demoqa.pages.SidePage;
 import demoqa.pages.WidgetsPage;
+import demoqa.pages.WidgetsPageHW;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.BeforeMethod;
@@ -36,5 +37,24 @@ public class WidgetsTest extends TestBase {
         assertTrue(new WidgetsPage(driver).areColorsSelected(colorsSelect));
     }
 
+    //! Вот этот тест. Пример того что я делал в WidgetsTestHW это версия Препода
+    //? для одного
+    @Test
+    public void standardMultiSelectByIndexTest() {
+        new WidgetsPage(driver)
+                .standardMultiSelectByIndex(2)
+                .verifyByIndex(2);
+    }
+
+    //? для нескольких машин
+    @Test
+    public void standardMultiSelectByCarsTest() {
+        String[] cars = {"Volvo", "Opel", "Saab"};
+        new WidgetsPage(driver)
+                .standardMultiSelectByCars(cars)
+                .verifyByCars(cars);
+
+
+    }
 
 }

@@ -72,4 +72,6 @@ public class WidgetsPageHW extends BasePage {
         System.out.println("✅ Успешно выбраны: " + selectedTexts);
         return this;
     }
+
+
 }
