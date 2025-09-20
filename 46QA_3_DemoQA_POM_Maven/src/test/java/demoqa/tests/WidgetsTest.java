@@ -49,10 +49,10 @@ public class WidgetsTest extends TestBase {
     //? для нескольких машин
     @Test
     public void standardMultiSelectByCarsTest() {
-        String[] cars = {"Volvo", "Opel", "Saab"};
+        String[] car = {"Volvo", "Opel", "Saab"};
         new WidgetsPage(driver)
-                .standardMultiSelectByCars(cars)
-                .verifyByCars(cars);
+                .standardMultiSelectByCars(car)
+                .verifyMultiSelectByCars(car);
 
 
     }
