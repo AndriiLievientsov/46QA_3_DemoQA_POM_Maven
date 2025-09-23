@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -92,6 +93,8 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(timeout));
         try {
             wait.until(ExpectedConditions.textToBePresentInElement(element, text));
+            String actualText = element.getText();
+            Assert.assertTrue(actualText.contains(text));
         } catch (TimeoutException e) {
             throw new AssertionError(e);
         }

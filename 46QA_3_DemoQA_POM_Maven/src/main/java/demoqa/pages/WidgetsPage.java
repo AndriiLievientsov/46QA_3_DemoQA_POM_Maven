@@ -146,7 +146,6 @@ public class WidgetsPage extends BasePage {
         //? метод containsAll сделает за нас все сравнения даже без циклов каких либо
         assert new HashSet<>(selectedText).containsAll(expectedText);
 
-
         return this;
     }
 }

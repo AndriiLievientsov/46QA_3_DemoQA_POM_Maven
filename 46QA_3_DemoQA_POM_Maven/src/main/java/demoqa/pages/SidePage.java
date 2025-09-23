@@ -49,5 +49,16 @@ public class SidePage extends BasePage {
         click(browserWindows);
         return this;
     }
+
+    //* SelectButtons
+
+    @FindBy(xpath = " //span[.='Buttons']")
+    WebElement buttons;
+
+    public ButtonsPage selectButtons() {
+        click(buttons);
+        return new ButtonsPage(driver);
+    }
+
 }
 

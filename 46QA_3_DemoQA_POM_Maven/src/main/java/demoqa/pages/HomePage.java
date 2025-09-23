@@ -42,5 +42,16 @@ public class HomePage extends BasePage {
         return new SidePage(driver);
     }
 
+    //* Elements
+    @FindBy(css = ".top-card:nth-child(1)")
+    WebElement elements;
+
+    public BasePage getElements() {
+        click(elements);
+        return new SidePage(driver);
+    }
+
+
+
 }
 
