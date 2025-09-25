@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class TestBoxTest  extends TestBase {
+public class TestBoxTests extends TestBase {
     @BeforeMethod
     public void precondition() {
         // тут сделали что бы по прекандишенам пряталась реклама .hideAds()
