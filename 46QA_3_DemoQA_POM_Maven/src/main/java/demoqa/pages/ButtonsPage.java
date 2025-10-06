@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import static org.openqa.selenium.devtools.v137.debugger.Debugger.pause;
 
 public class ButtonsPage extends BasePage {
     public ButtonsPage(WebDriver driver) {

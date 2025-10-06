@@ -60,5 +60,22 @@ public class SidePage extends BasePage {
         return new ButtonsPage(driver);
     }
 
+
+    @FindBy (xpath = " //span[.='Text Box']")
+    WebElement textBoxHw;
+
+    public SidePage selectTextBoxHW() {
+        click(textBoxHw);
+        return this;
+    }
+
+    //* TextBox
+    @FindBy (xpath = " //span[.='Text Box']")
+    WebElement textBox;
+
+    public SidePage selectTextBox() {
+        click(textBox);
+        return this;
+    }
 }
 
