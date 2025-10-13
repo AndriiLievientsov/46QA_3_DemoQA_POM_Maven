@@ -2,6 +2,7 @@ package demoqa.tests;
 
 import demoqa.core.TestBase;
 import demoqa.pages.HomePage;
+import demoqa.pages.PracticeFormPage;
 import demoqa.pages.SidePage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -17,11 +18,21 @@ public class PracticeFormTests extends TestBase {
     @Test
     public void practiceFormTest() {
         new PracticeFormPage(driver)
-                .enterPersonalData()
-                .selectGender()
-                .chooseDate()
-                .enterSubject()
-                .chooseHobbies()
+                .enterPersonalData(
+                        "Beth","Gibbons","portishead@gmail.com", "1234567890")
+                .selectGender("Female")
+                .chooseDate("4","May","1965")
+                .enterSubject(new String[]{"Maths", "English"})
+                .chooseHobbies(new String[]{"Sports", "Music"})
+                .uploadPicture("C:/Users/Apafios/Desktop/ForProjects/beth.jpg")
+                .enterCurrentAddress("Portishead, Bristol, UK")
+                .enterState("NCR")
+                .enterCity("Delhi")
+                .submitForm()
+                .verifySuccessRegistration("Thanks for submitting the form");
 
+        System.out.println("Это все успешно сделано");
     }
+
+
 }

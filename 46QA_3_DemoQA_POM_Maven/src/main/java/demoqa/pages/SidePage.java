@@ -77,5 +77,16 @@ public class SidePage extends BasePage {
         click(textBox);
         return this;
     }
+
+    //* Practice Form
+    @FindBy(xpath = "//span[.='Practice Form']")
+    WebElement practiceForm;
+
+    public SidePage selectPracticeForm() {
+        click(practiceForm);
+        return this;
+    }
+
+
 }
 
